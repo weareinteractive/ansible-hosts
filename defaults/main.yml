@@ -1,0 +1,9 @@
+---
+# For more information about default variables see:
+# http://www.ansibleworks.com/docs/playbooks_variables.html#id26
+#
+# hosts:
+#   - { ip: '127.0.0.1', domain: 'foobar.com' }
+
+# array of ip and domain names to add to /etc/hosts
+hosts: []
