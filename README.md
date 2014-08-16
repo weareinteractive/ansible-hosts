@@ -1,7 +1,7 @@
 # Ansible Hosts Role
 
-[![Build Status](https://travis-ci.org/weareinteractive/ansible-role-hosts.png?branch=master)](https://travis-ci.org/weareinteractive/ansible-role-hosts)
-[![Stories in Ready](https://badge.waffle.io/weareinteractive/ansible-role-hosts.svg?label=ready&title=Ready)](http://waffle.io/weareinteractive/ansible-role-hosts)
+[![Build Status](https://travis-ci.org/weareinteractive/ansible-hosts.png?branch=master)](https://travis-ci.org/weareinteractive/ansible-hosts)
+[![Stories in Ready](https://badge.waffle.io/weareinteractive/ansible-hosts.svg?label=ready&title=Ready)](http://waffle.io/weareinteractive/ansible-hosts)
 
 > `hosts` is an [ansible](http://www.ansible.com) role which: 
 > 
@@ -24,7 +24,7 @@ $ arm install franklinkim.hosts
 Using `git`:
 
 ```
-$ git clone https://github.com/weareinteractive/ansible-role-hosts.git
+$ git clone https://github.com/weareinteractive/ansible-hosts.git
 ```
 
 ## Variables
@@ -51,8 +51,8 @@ hosts: []
 ## Testing
 
 ```
-$ git clone https://github.com/weareinteractive/ansible-role-hosts.git
-$ cd ansible-role-hosts
+$ git clone https://github.com/weareinteractive/ansible-hosts.git
+$ cd ansible-hosts
 $ vagrant up
 ```
 
