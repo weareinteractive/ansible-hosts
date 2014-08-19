@@ -1,0 +1,14 @@
+---
+
+- name: Adding hosts entries
+  lineinfile: >
+    state=present
+    dest=/etc/hosts
+    line="{{ item.ip }} {{ item.domain }} # ansible"
+    regexp="^{{ item.ip }} {{ item.domain }} # ansible"
+    insertafter=EOF
+  with_items: hosts
+  tags:
+    - system
+    - hosts
+    - add

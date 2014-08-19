@@ -1,0 +1,12 @@
+---
+
+- name: Removing old entries
+  lineinfile: >
+    state=absent
+    dest=/etc/hosts
+    regexp="^.*# ansible$"
+  with_items: hosts
+  tags:
+    - system
+    - hosts
+    - reset

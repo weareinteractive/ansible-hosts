@@ -29,11 +29,13 @@ $ git clone https://github.com/weareinteractive/ansible-hosts.git
 
 ## Variables
 
+Here is a list of all the default variables for this role, which are also available in `defaults/main.yml`.
+
 ```
 # hosts:
 #   - { ip: '127.0.0.1', domain: 'foobar.com' }
 
-# array of ip and domain names to add to /etc/hosts
+# list of /etc/hosts entries
 hosts: []
 ```
 
