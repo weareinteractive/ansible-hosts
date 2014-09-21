@@ -6,6 +6,9 @@ galaxy_info:
   min_ansible_version: 1.6
   license: MIT
   platforms:
+    - name: opensuse
+      versions:
+        - All
     - name: Ubuntu
       versions:
         - All
