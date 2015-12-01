@@ -40,10 +40,15 @@ Here is a list of all the default variables for this role, which are also availa
 ```yaml
 ---
 # hosts:
-#   - { ip: '127.0.0.1', domain: 'foobar.com' }
+#   - { ip: '127.0.0.1', domain: 'foobar1.com' }
+#   - { ip: '127.0.0.2', domain: 'foobar2.com', state: absent }
 
 # list of /etc/hosts entries
 hosts: []
+# always remove all entries before adding the configured ones
+# if set to 'no' you can remove entries manually by setting the
+# item's state to 'absent'
+hosts_reset: yes
 
 ```
 
@@ -61,8 +66,9 @@ This is an example playbook:
   vars:
     hosts:
       - { ip: '127.0.0.1', domain: 'foobar1.com' }
-      - { ip: '127.0.0.2', domain: 'foobar3.com' }
-      - { ip: '127.0.0.3', domain: 'foobar4.com' }
+      - { ip: '127.0.0.2', domain: 'foobar2.com' }
+      - { ip: '127.0.0.3', domain: 'foobar3.com', state: absent }
+    hosts_reset: no
 
 ```
 
