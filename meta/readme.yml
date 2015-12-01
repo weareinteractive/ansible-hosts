@@ -1,0 +1,12 @@
+---
+
+galaxy_name: franklinkim.hosts
+github_user: weareinteractive
+github_name: ansible-hosts
+badges: |
+  [![Build Status](https://img.shields.io/travis/weareinteractive/ansible-hosts.svg)](https://travis-ci.org/weareinteractive/ansible-hosts)
+  [![Galaxy](http://img.shields.io/badge/galaxy-franklinkim.hosts-blue.svg)](https://galaxy.ansible.com/list#/roles/1371)
+  [![GitHub Tags](https://img.shields.io/github/tag/weareinteractive/ansible-hosts.svg)](https://github.com/weareinteractive/ansible-hosts)
+  [![GitHub Stars](https://img.shields.io/github/stars/weareinteractive/ansible-hosts.svg)](https://github.com/weareinteractive/ansible-hosts)
+description: |
+  > * manages hosts entries
