@@ -1,4 +1,8 @@
 ---
 
-- include: reset.yml
-- include: add.yml
+- include: manage.yml
+  tags:
+    - networking
+    - hosts
+    - manage
+    - hosts-manage
