@@ -1,0 +1,16 @@
+---
+
+- name: Removing all previous hosts entries
+  lineinfile:
+    state: absent
+    dest: /etc/hosts
+    regexp: "^.*# ansible$"
+
+- name: Adding hosts entries
+  lineinfile:
+    state: present
+    dest: /etc/hosts
+    line: "{{ item.ip }} {{ item.domain }} # ansible"
+    regexp: "^{{ item.ip }} {{ item.domain }} # ansible"
+    insertafter: EOF
+  with_items: hosts
