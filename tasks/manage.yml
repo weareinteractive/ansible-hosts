@@ -14,4 +14,4 @@
     line: "{{ item.ip }} {{ item.domain }} # ansible"
     regexp: "^{{ item.ip }} {{ item.domain }} # ansible"
     insertafter: EOF
-  with_items: hosts
+  with_items: "{{ hosts }}"
