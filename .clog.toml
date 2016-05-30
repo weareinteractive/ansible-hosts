@@ -1,4 +1,4 @@
 [clog]
 changelog = "CHANGELOG.md"
 repository = "https://github.com/weareinteractive/ansible-hosts"
-from-latest-tag = "true"
+from-latest-tag = true

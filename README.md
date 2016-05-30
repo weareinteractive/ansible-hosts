@@ -31,7 +31,7 @@ $ git clone https://github.com/weareinteractive/ansible-hosts.git franklinkim.ho
 
 ## Dependencies
 
-* Ansible >= 1.9
+* Ansible >= 2.0
 
 ## Variables
 
@@ -72,16 +72,17 @@ This is an example playbook:
 
 ```
 
+
 ## Testing
 
 ```shell
 $ git clone https://github.com/weareinteractive/ansible-hosts.git
 $ cd ansible-hosts
-$ vagrant up
+$ make test
 ```
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests and examples for any new or changed functionality.
+In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests and examples for any new or changed functionality.
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
