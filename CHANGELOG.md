@@ -1,3 +1,13 @@
+<a name="1.2.0"></a>
+## 1.2.0 (2016-05-30)
+
+
+#### Features
+
+*   make ansible 2.x compatible ([e233c151](https://github.com/weareinteractive/ansible-hosts/commit/e233c15156f5ee64cc9e1e90ab980d3e1695e887))
+
+
+
 <a name="1.1.0"></a>
 ## 1.1.0 (2015-12-01)
 
