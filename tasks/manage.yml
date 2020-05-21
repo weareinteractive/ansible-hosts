@@ -10,7 +10,7 @@
   blockinfile:
     path: /etc/hosts
     block: |
-      {% for item in hosts %}
+      {% for item in hosts_entries %}
       {{ item.ip }} {{ item.domain }}
       {% endfor %}
     marker: "# {mark} ANSIBLE MANAGED BLOCK weareinteractive.hosts"

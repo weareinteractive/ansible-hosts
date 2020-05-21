@@ -1,7 +1,7 @@
 ---
-# hosts:
+# hosts_entries:
 #   - { ip: '127.0.0.1', domain: 'foobar1.com' }
 #   - { ip: '127.0.0.2', domain: 'foobar2.com' }
 
 # list of /etc/hosts entries
-hosts: []
+hosts_entries: []
