@@ -1,11 +1,11 @@
 ---
 
 - hosts: all
+  become: yes
   roles:
-    - franklinkim.hosts
+    - weareinteractive.hosts
   vars:
-    hosts:
+    hosts_entries:
       - { ip: '127.0.0.1', domain: 'foobar1.com' }
       - { ip: '127.0.0.2', domain: 'foobar2.com' }
-      - { ip: '127.0.0.3', domain: 'foobar3.com', state: absent }
-    hosts_reset: no
+      - { ip: '127.0.0.3', domain: 'foobar3.com' }

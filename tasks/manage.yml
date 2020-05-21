@@ -1,17 +1,16 @@
 ---
 
-- name: Removing all hosts entries
+- name: Removing hosts entries < 1.3.0
   lineinfile:
     state: absent
     dest: /etc/hosts
     regexp: "^.*# ansible$"
-  when: hosts_reset
 
 - name: Adding hosts entries
-  lineinfile:
-    state: "{{ item.state | default('present') }}"
-    dest: /etc/hosts
-    line: "{{ item.ip }} {{ item.domain }} # ansible"
-    regexp: "^{{ item.ip }} {{ item.domain }} # ansible"
-    insertafter: EOF
-  with_items: "{{ hosts }}"
+  blockinfile:
+    path: /etc/hosts
+    block: |
+      {% for item in hosts %}
+      {{ item.ip }} {{ item.domain }}
+      {% endfor %}
+    marker: "# {mark} ANSIBLE MANAGED BLOCK weareinteractive.hosts"
