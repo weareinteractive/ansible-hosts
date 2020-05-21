@@ -1,37 +1,41 @@
-# Ansible franklinkim.hosts role
+# Ansible weareinteractive.hosts role
 
 [![Build Status](https://img.shields.io/travis/weareinteractive/ansible-hosts.svg)](https://travis-ci.org/weareinteractive/ansible-hosts)
-[![Galaxy](http://img.shields.io/badge/galaxy-franklinkim.hosts-blue.svg)](https://galaxy.ansible.com/list#/roles/1371)
+[![Galaxy](http://img.shields.io/badge/galaxy-weareinteractive.hosts-blue.svg)](https://galaxy.ansible.com/weareinteractive/hosts)
 [![GitHub Tags](https://img.shields.io/github/tag/weareinteractive/ansible-hosts.svg)](https://github.com/weareinteractive/ansible-hosts)
 [![GitHub Stars](https://img.shields.io/github/stars/weareinteractive/ansible-hosts.svg)](https://github.com/weareinteractive/ansible-hosts)
 
-> `franklinkim.hosts` is an [Ansible](http://www.ansible.com) role which:
+> `weareinteractive.hosts` is an [Ansible](http://www.ansible.com) role which:
 >
 > * manages hosts entries
+
+**Note:**
+
+> Since Ansible Galaxy supports [organization](https://www.ansible.com/blog/ansible-galaxy-2-release) now, this role has moved from `franklinkim.hosts` to `weareinteractive.hosts`!
 
 ## Installation
 
 Using `ansible-galaxy`:
 
 ```shell
-$ ansible-galaxy install franklinkim.hosts
+$ ansible-galaxy install weareinteractive.hosts
 ```
 
 Using `requirements.yml`:
 
 ```yaml
-- src: franklinkim.hosts
+- src: weareinteractive.hosts
 ```
 
 Using `git`:
 
 ```shell
-$ git clone https://github.com/weareinteractive/ansible-hosts.git franklinkim.hosts
+$ git clone https://github.com/weareinteractive/ansible-hosts.git weareinteractive.hosts
 ```
 
 ## Dependencies
 
-* Ansible >= 2.0
+* Ansible >= 2.4
 
 ## Variables
 
@@ -39,16 +43,12 @@ Here is a list of all the default variables for this role, which are also availa
 
 ```yaml
 ---
-# hosts:
+# hosts_entries:
 #   - { ip: '127.0.0.1', domain: 'foobar1.com' }
-#   - { ip: '127.0.0.2', domain: 'foobar2.com', state: absent }
+#   - { ip: '127.0.0.2', domain: 'foobar2.com' }
 
 # list of /etc/hosts entries
-hosts: []
-# always remove all entries before adding the configured ones
-# if set to 'no' you can remove entries manually by setting the
-# item's state to 'absent'
-hosts_reset: yes
+hosts_entries: []
 
 ```
 
@@ -61,14 +61,14 @@ This is an example playbook:
 ---
 
 - hosts: all
+  become: yes
   roles:
-    - franklinkim.hosts
+    - weareinteractive.hosts
   vars:
-    hosts:
+    hosts_entries:
       - { ip: '127.0.0.1', domain: 'foobar1.com' }
       - { ip: '127.0.0.2', domain: 'foobar2.com' }
-      - { ip: '127.0.0.3', domain: 'foobar3.com', state: absent }
-    hosts_reset: no
+      - { ip: '127.0.0.3', domain: 'foobar3.com' }
 
 ```
 
