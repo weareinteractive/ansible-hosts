@@ -1,3 +1,15 @@
+<a name="2.0.0"></a>
+## 2.0.0 (2020-05-21)
+
+
+#### Features
+
+*   switch to hosts_entries due to reserved name ([139d2633](https://github.com/weareinteractive/ansible-hosts/commit/139d26333bd4b4e663d64760e337ea55b74e8e35))
+*   swtich to blockinfile ([8ecf6f09](https://github.com/weareinteractive/ansible-hosts/commit/8ecf6f09e75eec70ee1fb154e9c3a932c4904538))
+*   bump ansible min version ([017cac03](https://github.com/weareinteractive/ansible-hosts/commit/017cac0386852eac7f3ea10184870b593c66d385))
+
+
+
 <a name="1.2.0"></a>
 ## 1.2.0 (2016-05-30)
 
