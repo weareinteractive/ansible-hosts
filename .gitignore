@@ -1,6 +1,8 @@
-.*
-*~
-!.git*
-!.clog.toml
-!.travis.yml
-!.editorconfig
+*.log
+*.retry
+.DS_Store
+.vagrant
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea
